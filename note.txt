@@ -1,0 +1,28 @@
+1, npm init => enter
+Cách nhanh hơn: npm init -y (Không cần enter nhiều lần)
+
+2, Thêm câu lệnh trong script file package.json
+- Trường type mặc định là type: commonjs và module
+
+Nếu dùng module thì dùng đc import và export k dùng đc require
+Nếu dùng commonjs thì k dùng đc import, export chỉ dùng đc require hoặc module.export
+
+* Có một cái dùng đc cả hai trong một dự án: Babel
+
+3, Tạo file index.js
+
+4, Chạy file
+c1: Terminal: node index.js => Log ket quả ra terminal
+c2: npm run dev (dev là biến đã đặt)
+
+
+* Tạo dự án:
+express: Hứng, nhận request từ client gửi lên
+dotenv: Đọc được những file môi trường
+cors: Những client nào được truy cập vào server để lấy data
+nodemon: Theo dõi sự thay đổi và watch file
+
+
+1, npm i express dotenv cors nodemon
+
+2, Tạo file env
