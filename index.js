@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require('cors');
 
 require('dotenv').config()
+const initRoutes = require('./src/routes');
 
 const app = express()
 app.use(cors({
@@ -19,9 +20,14 @@ app.use(express.urlencoded({extended: true}))
 // Route (đường dẫn để client gọi tới )
 // req: client gửi lên
 // res: trả về data cho client 
-app.use('/', (req, res) => { 
-  return res.send('Server on...')
-})
+
+// C1: Viết thẳng trong file index 
+// app.use('/', (req, res) => { 
+//   return res.send('Server on...')
+// })
+
+// C2: Viết tách biệt trong thư mục router 
+initRoutes(app)
 
 
 // Cho server chạy 
