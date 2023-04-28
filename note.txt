@@ -26,3 +26,14 @@ nodemon: Theo dõi sự thay đổi và watch file
 1, npm i express dotenv cors nodemon
 
 2, Tạo file env
+
+
+
+
+
+https://sequelize.org/docs/v6/getting-started/
++ Cài sequelize (tương tác với db)
+npm install --save sequelize
+npm install --save-dev sequelize-cli
+
+npx sequelize db:migrate

@@ -4,6 +4,8 @@ const cors = require('cors');
 require('dotenv').config()
 const initRoutes = require('./src/routes');
 
+require('./connection_database');
+
 const app = express()
 app.use(cors({
   origin: process.env.CLIENT_URL, // Chỉ cho phép url này đc truy cập vào server
