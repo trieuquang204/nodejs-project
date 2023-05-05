@@ -51,3 +51,6 @@ INSERT INTO Roles (code, value) VALUES ('R3', 'User');
 @babel/node: Chạy dự án bằng babel
 
 npm i -D @babel/core @babel/preset-env @babel/node
+
+
++++ npm i bcryptjs
