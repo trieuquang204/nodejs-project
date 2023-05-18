@@ -27,6 +27,8 @@ nodemon: Theo dõi sự thay đổi và watch file
 
 2, Tạo file env
 
+https://www.youtube.com/watch?v=SSCHzHaTnqQ&list=PLGcINiGdJE93CggoN9YBjSnDRV7Rbp3Qu&index=8
+
 
 
 

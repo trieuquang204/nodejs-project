@@ -21,13 +21,20 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const {error} = joi.object({email, password }).validate(req.body)
-    if(error) return badRequest(error.details[0]?.message, res )
+    const {email, password} = req.body
 
-    const response = await services.register(req.body)
+    if(!email || !password) return res.status(400).json({
+      err: 1,
+      mes: 'Missing inputs'
+    })
+
+    const response = await services.login(req.body)
     return res.status(200).json(response)
 
   } catch (error) {
-    return internalServerError(res)
+    return res.status(500).json({
+      err: -1,
+      mes: 'Internal server error'
+    })
   }
 }

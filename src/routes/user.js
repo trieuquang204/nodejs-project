@@ -1,13 +1,15 @@
-const router = require('express').Router();
+import * as controllers from '../controllers';
+import express from 'express';
+import verifyToken from '../middlewares/verify_token';
+import {isAdmin, isModerator} from '../middlewares/verify_roles';
 
-const user = require('../controllers/user');
+const router = express.Router()
 
-// c1: 
-// router.get('/', (req, res) => {
-//   return res.send('User')
-// })
 
-// C2: Tách sang file controller 
-router.get('/', user.getUsers)
+router.use(verifyToken)
+router.use(isModerator)
+
+// router.get('/', [verifyToken, isAdmin], controllers.getCurrent)
+router.get('/', controllers.getCurrent)
 
 module.exports = router;
